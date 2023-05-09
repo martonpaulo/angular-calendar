@@ -1,0 +1,49 @@
+<div class="appointments">
+	<mat-toolbar color="primary">
+		<button mat-icon-button matTooltip="Back to calendar" (click)="goBack()">
+			<mat-icon>
+				arrow_back
+			</mat-icon>
+		</button>
+		<h2>{{ pageTitle }}</h2>
+		<button mat-icon-button matTooltip="Add new appointment" class="add-button" (click)="addNewAppointment()">
+			<mat-icon>
+				add
+			</mat-icon>
+		</button>
+	</mat-toolbar>
+
+	<ul class="appointment-list" cdkDropListGroup>
+
+		<li *ngFor="let hour of hoursOfDay">
+			<span class="hour">{{ getHourInString(hour) }}h</span>
+
+			<div>
+				<div *ngIf="isHourEmpty(hour)" class="no-appointments">
+					No appointments for this hour
+				</div>
+
+				<div class="appointment-container" cdkDropList [cdkDropListData]="appointmentsForHour[hour]"
+					(cdkDropListDropped)="drop($event, hour)">
+					<div *ngFor="let appointment of appointmentsForHour[hour]" class="appointment" cdkDrag>
+
+						<span class="title">{{ appointment.title }}</span>
+						<span *ngIf="appointment.description" class="description">
+							- {{ appointment.description }}
+						</span>
+
+						<button mat-icon-button matTooltip="Edit appointment" class="edit-button"
+							(click)="editAppointment(appointment)">
+							<mat-icon>
+								edit_note
+							</mat-icon>
+						</button>
+
+					</div>
+				</div>
+			</div>
+
+
+		</li>
+	</ul>
+</div>

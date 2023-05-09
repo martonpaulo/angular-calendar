@@ -1,0 +1,23 @@
+form {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+mat-form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="time"] {
+  width: 100%;
+}
+
+.buttons {
+  margin-top: 2rem;
+	margin-left: auto;
+}
+
+button[type="submit"] {
+	margin-left: 1rem;
+}

@@ -1,0 +1,71 @@
+.calendar {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-toolbar {
+  height: 5rem;
+}
+
+.navigation-buttons {
+  margin: 0 1rem;
+}
+
+h2, h4 {
+  margin: 0;
+}
+
+.week-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  height: 5rem;
+}
+
+.week-days div {
+  flex-basis: calc(100% / 7);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 100%;
+}
+
+h4 {
+  padding-top: 1.5rem;
+}
+
+.weeks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 30rem;
+}
+
+.weeks div {
+  flex-basis: calc(100% / 7);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+
+.weeks > div {
+  border-bottom: 1px solid #ccc;
+}
+
+.day {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.invalid button {
+  display: none;
+}

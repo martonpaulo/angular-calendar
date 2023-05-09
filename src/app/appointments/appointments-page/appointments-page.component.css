@@ -1,0 +1,105 @@
+.appointments {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+mat-toolbar {
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+.add-button {
+  margin-left: auto;
+}
+
+.appointment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.appointment-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hour {
+  display: inline-block;
+  min-width: 3rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.appointments {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description {
+  font-style: italic;
+}
+
+.no-appointments {
+  font-style: italic;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+.edit-button {
+  margin-left: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+}
+
+.edit-button mat-icon {
+  font-size: 1.5rem;
+}
+
+.appointment-container {
+  display: flex;
+  min-height: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.appointment {
+  border: solid 1px #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: move;
+  margin-right: 0.5rem;
+  background: white;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
